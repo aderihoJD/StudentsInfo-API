@@ -1,15 +1,10 @@
-const config = {
-    database: "students",
-    login: "root",
-    pass: "root",
-    options: {
-        dialect: "mysql",
-        host: "localhost",
-        define: {
-            timestamps: false
-                }
-    },
-    applicationPort : 3001
-}
+const nconf = require('nconf');
+const path = require('path');
 
-module.exports = config;
+export default function() {
+    nconf.argv()
+        .env()
+        .file({ file: path.join(__dirname, 'config.json') });
+
+    return nconf;
+}

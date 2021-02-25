@@ -1,0 +1,17 @@
+{
+    "databaseConfig": {
+        "databaseName": "students",
+        "login": "root",
+        "password": "root",
+        "options": {
+            "dialect": "mysql",
+            "host": "localhost",
+            "define": {
+                "timestamps": false
+            }
+        }
+    },
+    "applicationConfig": {
+        "port": 3001
+    }
+}
